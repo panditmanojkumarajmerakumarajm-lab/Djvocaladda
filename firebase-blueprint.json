@@ -1,0 +1,38 @@
+{
+  "entities": {
+    "AudioSample": {
+      "title": "Audio Sample",
+      "description": "Vocal tag audio sample entry in the DJ Vocal Adda library",
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Title of the audio sample"
+        },
+        "audioUrl": {
+          "type": "string",
+          "description": "Playable URL of the audio file"
+        },
+        "category": {
+          "type": "string",
+          "description": "Vocal tag category/genre"
+        },
+        "duration": {
+          "type": "string",
+          "description": "Duration formatted as M:SS"
+        },
+        "plays": {
+          "type": "integer",
+          "description": "Total plays count"
+        }
+      },
+      "required": ["title", "audioUrl"]
+    }
+  },
+  "firestore": {
+    "/samples/{sampleId}": {
+      "schema": "AudioSample",
+      "description": "Public audio samples available for preview and custom tag requests"
+    }
+  }
+}

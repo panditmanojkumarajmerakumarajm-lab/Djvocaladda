@@ -1,0 +1,6 @@
+{
+  "name": "DJ Vocal Adda",
+  "description": "Professional DJ Tag generator and high-quality vocal samples gallery with easy ordering.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
