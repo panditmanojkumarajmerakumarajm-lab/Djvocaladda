@@ -26,8 +26,9 @@ export default function AuthCard({ onLogin }: AuthCardProps) {
     }
 
     // Determine if admin
-    // Only tiwarigautam819@gmail.com is allowed as admin
-    const isUserAdmin = email.trim().toLowerCase() === "tiwarigautam819@gmail.com";
+    // Both tiwarigautam819@gmail.com and singha26890@gmail.com are allowed as admin
+    const emailLower = email.trim().toLowerCase();
+    const isUserAdmin = emailLower === "tiwarigautam819@gmail.com" || emailLower === "singha26890@gmail.com";
 
     onLogin({
       email: email.trim(),

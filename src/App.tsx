@@ -16,7 +16,8 @@ export default function App() {
       try {
         const u = JSON.parse(stored);
         if (u && u.email) {
-          u.isAdmin = u.email.trim().toLowerCase() === "tiwarigautam819@gmail.com";
+          const emailLower = u.email.trim().toLowerCase();
+          u.isAdmin = emailLower === "tiwarigautam819@gmail.com" || emailLower === "singha26890@gmail.com";
         }
         return u;
       } catch (e) {
